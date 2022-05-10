@@ -1,0 +1,33 @@
+fieldset {
+    background-color: rgb(90, 211, 90);
+    border: 1px solid blue;
+    margin: 10px 0px 30px 2.5%;
+    width: 100%;
+} 
+ 
+ body {
+    margin: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+h2 {
+    color: orange;
+    size: 150px;
+    font-weight: bold;
+}
+
+legend {
+    color:white;
+    background-color: blueviolet;
+    width: 100%;
+}
+
+.movieName .ratings{
+    width: 100%;
+}
+
+/* #moviesWithRating {
+    font-size: 100%;
+    font-weight: bold;
+} */

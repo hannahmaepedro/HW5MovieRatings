@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Object Version2</title>
+<link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body>
+<h2>Movie Ratings</h2>
+
+<form name = "mainForm" onsubmit="return false"></form>
+    <fieldset id = "movies">
+    <legend> Please rate your movies</legend>
+    <br>
+    <label for = "movieTitle">Name of Movie: </label>
+    <input name = "movieTitle" id="movieTitle"/>
+    <br>
+    <br>
+    <form id = "selectRating"></form>
+        <label for = "movieRating">Rating (1-5): </label>
+        <select name = "ratings" id = "ratings">
+            <option value = "1"> 1 </option>
+            <option value = "2"> 2 </option>
+            <option value = "3"> 3 </option>
+            <option value = "4"> 4 </option>
+            <option value = "5"> 5 </option>
+        </select>
+    <br>
+    <br>
+    <input type="button" id="addMovie" value = "Add Movie"></input>
+    <input type="button" id="showMovies" value= "Show Movies"></input>
+    </form>
+    <br>
+    </fieldset>
+
+<br>
+<fieldset id = "moviesWithRating" >
+    <!-- <label for = "withRatings"> Movies with rating </label> -->
+    <h3>
+        <ol>Movies with rating</ol>
+    </h3>
+</fieldset>
+
+<script src="main.js"></script>
+</body>
+
+</html>
