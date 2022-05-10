@@ -1,4 +1,4 @@
-let movies = [];
+let moviesArray = [];
 
 document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("movieTitle").focus();
@@ -13,13 +13,13 @@ let newMovie = function () {
         document.getElementById("movieTitle").value,
         document.getElementById("movieRating").value
     );
-    
+
     //validation required
     if (!movie.isValid()) {
         alert("Please complete all fields.");
     } else {
-        movies.push(movie);  
-        console.log(movies);
+        moviesArray.push(movie);  
+        console.log(moviesArray);
     }
 
 //clear text fields
@@ -31,8 +31,13 @@ let newMovie = function () {
 let displayMovies = function () {
     document.getElementById("movieList").innerHTML = "";
 
-    for (let i in movies) {
-        displayString += movies[i].movieTitle + "\t" + movies[i].movieRating;
+    //sort moviesArray
+    moviesArray.sort(function(a,b){
+        return b.rating - a.rating
+    });
+    
+    for (let i in moviesArray) {
+        //displayString += moviesArray[i].movieTitle + "\t" + moviesArray[i].movieRating;
     }
     document.getElementById("showMovies").value = displayString;
     document.getElementById("movieTitle").select();
