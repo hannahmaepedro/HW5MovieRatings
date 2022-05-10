@@ -11,6 +11,6 @@ Movie.prototype.isValid = function () {
         return true;
     }
 }
-Movie,prototyoe.GetAll = function() {
+Movie,prototype.GetAll = function() {
     return this.movieTitle + "ratings";
 }
