@@ -15,7 +15,7 @@ let newMovie = function () {
     );
 
     //validation required
-    if (!movie.isValid()) {
+    if (!movie.isValid())  {
         alert("Please complete all fields.");
     } else {
         moviesArray.push(movie);  
@@ -25,7 +25,7 @@ let newMovie = function () {
 //clear text fields
     document.getElementById("movieTitle").value= "",
     document.getElementById("movieRating").value= "blank";
-    
+
     document.getElementById("movieTitle").focus();
 };
 
