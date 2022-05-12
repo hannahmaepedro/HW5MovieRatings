@@ -25,6 +25,7 @@ let newMovie = function () {
 //clear text fields
     document.getElementById("movieTitle").value= "",
     document.getElementById("movieRating").value= "blank";
+    
     document.getElementById("movieTitle").focus();
 };
 
@@ -32,13 +33,15 @@ let displayMovies = function () {
     document.getElementById("movieList").innerHTML = "";
 
     //sort moviesArray
-    moviesArray.sort(function(a,b){
+    moviesArray.sort(function(a,b) {
         return b.rating - a.rating
     });
     
     for (let i in moviesArray) {
-        //displayString += moviesArray[i].movieTitle + "\t" + moviesArray[i].movieRating;
+       let li = document.createElement("li");
+       ul.appendChild(li);
+       li.innerHTML = moviesArray[i].GetAll();
     }
-    document.getElementById("showMovies").value = displayString;
-    document.getElementById("movieTitle").select();
+    // document.getElementById("showMovies").value = displayString;
+    // document.getElementById("movieTitle").select();
 }
